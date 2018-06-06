@@ -1,0 +1,213 @@
+{
+  "platforms" : [
+    "ios", "android"
+  ],
+  "views" : [
+    {
+      "name" : "loginView",
+      "launcher" : true,
+      "controller" : "loginController",
+      "type" : "view",
+      "position" : {
+        "width" : "350",
+        "height" : "600"
+      },
+      "style" : {
+        "background" : [209,239,239]
+      },
+      "content" : [
+        {
+          "name" : "labelLogin",
+          "type" : "label",
+          "text" : "Log in",
+          "position" : {
+            "x" : "25",
+            "y" : "50",
+            "width" : "300",
+            "height" : "50"
+          },
+          "font" : {
+            "font" : "default",
+            "fontStyle" : "bold",
+            "fontSize" : "30",
+            "fontColor": [7,74,134]
+          }
+        },
+        {
+          "name" : "textEmail",
+          "type" : "editText",
+          "position" : {
+            "x" : "25",
+            "y" : "150",
+            "width" : "300",
+            "height" : "50"
+          },
+          "font" : {
+            "font" : "default",
+            "fontType" : "email",
+            "fontSize" : "15",
+            "fontColor": [7,74,134]
+          }
+        },
+        {
+          "name" : "textPassword",
+          "type" : "editText",
+          "position" : {
+            "x" : "25",
+            "y" : "250",
+            "width" : "300",
+            "height" : "50"
+          },
+          "font" : {
+            "font" : "default",
+            "fontType" : "email",
+            "fontSize" : "15",
+            "fontColor": [7,74,134]
+          }
+        },
+        {
+          "name" : "buttonLogin",
+          "type" : "button",
+          "text" : "My Button",
+          "position" : {
+            "x" : "125",
+            "y" : "350",
+            "width" : "100",
+            "height" : "50"
+          },
+          "font" : {
+            "font" : "default",
+            "fontType" : "email",
+            "fontSize" : "15",
+            "fontColor": [209,239,239]
+          },
+          "onTap" : "gotoHomeView",
+          "style" : {
+            "background" : [7,74,134]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "homeView",
+      "type" : "view",
+      "controller" : "homeController",
+      "position" : {
+        "width" : "350",
+        "height" : "600"
+      },
+      "style" : {
+        "background" : [209,239,239]
+      },
+      "content" : [
+        {
+          "name" : "lbl1",
+          "type" : "label",
+          "text" : "Mayo",
+          "position" : {
+            "x" : "25",
+            "y" : "100",
+            "width" : "150",
+            "height" : "50"
+          },
+          "font" : {
+            "font" : "default",
+            "fontStyle" : "bold",
+            "fontSize" : "22",
+            "fontColor": [7,74,134]
+          }
+        },
+        {
+          "name" : "lbl2",
+          "type" : "label",
+          "text" : "Abril",
+          "position" : {
+            "x" : "200",
+            "y" : "100",
+            "width" : "150",
+            "height" : "50"
+          },
+          "font" : {
+            "font" : "default",
+            "fontStyle" : "italic",
+            "fontSize" : "22",
+            "fontColor": [7,74,134]
+          }
+        },
+        {
+          "name" : "view1",
+          "type" : "view",
+          "position" : {
+            "x" : "0",
+            "y" : "300",
+            "width" : "350",
+            "height" : "250"
+          },
+          "style" : {
+            "background" : [7,74,134]
+          },
+          "content" : [
+            {
+              "name" : "lbl3",
+              "type" : "label",
+              "text" : "Junio",
+              "position" : {
+                "x" : "25",
+                "y" : "350",
+                "width" : "100",
+                "height" : "50"
+              },
+              "font" : {
+                "font" : "default",
+                "fontStyle" : "italic",
+                "fontSize" : "22",
+                "fontColor": [209,239,239]
+              }
+            },
+            {
+              "name" : "lbl4",
+              "type" : "label",
+              "text" : "Febrero",
+              "position" : {
+                "x" : "125",
+                "y" : "400",
+                "width" : "100",
+                "height" : "50"
+              },
+              "font" : {
+                "font" : "default",
+                "fontStyle" : "italic",
+                "fontSize" : "22",
+                "fontColor": [209,239,239]
+              }
+            },
+            {
+              "name" : "lbl5",
+              "type" : "label",
+              "text" : "Diciembre",
+              "position" : {
+                "x" : "125",
+                "y" : "500",
+                "width" : "100",
+                "height" : "50"
+              },
+              "font" : {
+                "font" : "default",
+                "fontStyle" : "italic",
+                "fontSize" : "22",
+                "fontColor": [209,239,239]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "transitions" : [
+    {
+      "name" :  "gotoHomeView",
+      "destiny" : "homeView",
+      "origin" : "loginView"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 "use strict";
 var _ = require( "lodash" );
-exports.inject = function ( parser, config, eHandler ) {
+exports.inject = function ( fs, parser, config, eHandler ) {
     var errManyElmts = "The command has too many elements";
     var errFewElmts = "Not enough command elements";
     var undefinedError = "Undefined command";
@@ -81,8 +81,8 @@ exports.inject = function ( parser, config, eHandler ) {
         console.log( " \n  - generate [Json origin path] [app name]\n\n" );
         console.log( " \n  - config show " );
         console.log( " \n  - config remove [android / ios] " );
-        console.log( " \n  - config add  [android / ios]\ n" );
-      } else {
+        console.log( " \n  - config add  [android / ios]\n" );
+      } else if ( command.length === 2 ) {
         if ( command[1] === "config" ) {
           console.log( "\n  - config show" );
           console.log( "\n  - config remove [android / ios]" );
@@ -92,6 +92,20 @@ exports.inject = function ( parser, config, eHandler ) {
           console.log( "\n  - generate template [template name] [app name]" );
           console.log( "\n  - generate [Json origin path] [save path] [app name]" );
           console.log( "\n  - generate [Json origin path] [app name]\n" );
+        } else if ( command[1] === "template") {
+          console.log( "\n The commands for creating an app templates are: " );
+          console.log( "\n  - generate template [template name] [save path] [app name]" );
+          console.log( "\n  - generate template [template name] [app name]" );
+          printTemplatesFileNames();
+        } else {
+          eHandler.error({
+            "name" : undefinedError,
+            "description" : "The " + command[1] + "command does not exist"
+          });
+        }
+      } else if ( command.length === 3 ) {
+        if ( command[2] === "template" ) {
+          printTemplatesFileNames();
         } else {
           eHandler.error({
             "name" : undefinedError,
@@ -99,6 +113,17 @@ exports.inject = function ( parser, config, eHandler ) {
           });
         }
       }
+    }
+    /**
+     * Prints the names of the files on the template folder
+     */
+    function printTemplatesFileNames () {
+      console.log( "\n The templates available are: " );
+      var files = fs.readdirSync('./Templates/JSON/');
+      files.forEach(file => {
+        console.log( "  - " + file );
+      });
+      console.log("");
     }
     return {
       read : _read,

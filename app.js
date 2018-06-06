@@ -8,7 +8,7 @@ var config = require('./Config/config').inject( fs, path, errorHandler );
 var masterGenerator = require('./Generator/masterGenerator').inject( fs, path, config, errorHandler );
 var parserValidator = require('./Parser/parserValidator').inject( errorHandler );
 var parser = require('./Parser/parser').inject( fs, path, masterGenerator, parserValidator, errorHandler );
-var commands = require('./CLI/commands').inject( parser, config, errorHandler );
+var commands = require('./CLI/commands').inject( fs, parser, config, errorHandler );
 
 var rl = readline.createInterface({
   input: process.stdin,
