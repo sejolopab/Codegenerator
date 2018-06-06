@@ -82,6 +82,7 @@ exports.inject = function ( fs, parser, config, eHandler ) {
         console.log( " \n  - config show " );
         console.log( " \n  - config remove [android / ios] " );
         console.log( " \n  - config add  [android / ios]\n" );
+        console.log( " \n  - help [command]\n");
       } else if ( command.length === 2 ) {
         if ( command[1] === "config" ) {
           console.log( "\n  - config show" );
