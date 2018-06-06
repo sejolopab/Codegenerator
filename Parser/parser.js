@@ -27,7 +27,7 @@ exports.inject = function ( fs, path, masterGenerator, validator, eHandler ) {
       } else if ( command.length === 4 ) {
         if ( command[1] === "template" ) {
           //  generate  template [templateName] [appname]
-          path = filePath + "Templates/" + command[2];
+          path = filePath + "Templates/JSON/" + command[2];
           if ( !fs.existsSync( filePath + "Output/" ) ) {
             fs.mkdirSync( filePath + "Output/" );
           }
@@ -60,18 +60,7 @@ exports.inject = function ( fs, path, masterGenerator, validator, eHandler ) {
    * @param {string} appName Name of the aplication
    */
   function _parse ( origin, destination, appName ) {
-    if ( !fs.existsSync( origin ) ) {
-      eHandler.error({
-        "name" : "Origin " + filePathNotFound,
-        "description" : "The recieved origin path does not exist, please check and try again"
-      });
-      return null;
-    }
-    if ( !fs.existsSync( destination ) ) {
-      eHandler.error({
-        "name" : "Save directory does not exist ",
-        "description" : "The save path does not exist, please check and try again"
-      });
+    if ( !validPaths ( origin, destination, appName ) ) {
       return null;
     }
     var parsedData = JSON.parse( fs.readFileSync( origin, "utf8" ) );
@@ -80,6 +69,36 @@ exports.inject = function ( fs, path, masterGenerator, validator, eHandler ) {
     if ( validator.checkMe( parsedData ) ) {
       masterGenerator.generateApplication( parsedData );
     }
+  }
+  /**
+   * Verifies if the origin and destination are valid
+   * @param {string} origin Location of the Json file
+   * @param {string} destination Saving destination of the generated code
+   * @param {string} appName Name of the aplication
+   */
+  function validPaths ( origin, destination, appName ) {
+    if ( !fs.existsSync( origin ) ) {
+      eHandler.error({
+        "name" : "Origin " + filePathNotFound,
+        "description" : "The recieved origin path does not exist, please check and try again"
+      });
+      return false;
+    }
+    if ( !fs.existsSync( destination ) ) {
+      eHandler.error({
+        "name" : "Save directory does not exist ",
+        "description" : "The save path does not exist, please check and try again"
+      });
+      return false;
+    }
+    if ( fs.existsSync( destination + appName ) ) {
+      eHandler.error({
+        "name" : "The code could not be generated",
+        "description" : "Application name already exist on the destination save path"
+      });
+      return false
+    }
+    return true
   }
   return {
     parseMe : _parseMe,
