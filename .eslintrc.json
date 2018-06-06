@@ -1,0 +1,21 @@
+{
+  "env": {
+      "node": true
+  },
+    "rules": {
+      "quotes": [ "error", "double" ],
+      "semi": [ "error", "always" ],
+      "eqeqeq": [ "error", "always" ],
+      "no-console": [ "error", { "allow": ["warn", "error","log"] } ],
+      "space-before-function-paren": ["error", "never"],
+      "keyword-spacing": ["error", {
+        "before": true,
+        "after": true
+      }],
+      "space-before-blocks": ["error", "always"],
+      "space-before-function-paren": ["error", "always"],
+      "strict": "error",
+      "array-bracket-spacing": "error",
+      "space-in-parens": ["error", "always", { "exceptions": ["{}"] } ]
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "platforms" : [
+    "android", "ios"
+  ],
+  "views" : [
+    {
+      "name" : "loginView",
+      "launcher" : true,
+      "controller" : "loginController",
+      "type" : "view",
+      "position" : {
+        "width" : "350",
+        "height" : "600"
+      },
+      "style" : {
+        "background" : ["240","240","240"]
+      },
+      "content" : [
+        {
+          "name" : "lbl_1",
+          "type" : "label",
+          "text" : "Log in",
+          "position" : {
+            "x" : "200",
+            "y" : "100",
+            "width" : "600",
+            "height" : "50"
+          },
+          "font" : {
+            "font" : "default",
+            "fontStyle" : "bold",
+            "fontSize" : "22"
+          }
+        }
+      ]
+    }
+  ],
+  "transitions" : [
+    {
+      "name" :  "gotoHomeView",
+      "destiny" : "homeView"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "name": "CodeGenerator",
+  "description": null,
+  "contentType": "json",
+  "fileVersion": 3,
+  "type": "AndroidProject",
+  "theme": "napkin",
+  "contents": {
+    "id": 12563484,
+    "appName": "CodeGeneratorTest",
+    "saveTime": "2017-06-19T22:15:10.405Z",
+    "lastNotificationId": 0,
+    "theme": "napkin",
+    "isCrazy": false,
+    "defaultFontFamily": "Tahoma",
+    "pageGroups": [
+      {
+        "type": "sketch.framework.PageGroup",
+        "properties": {
+          "id": "ea12ef78-acd4-45fc-79fa-53b31419b587",
+          "name": "Default group",
+          "pageIds": [
+            "d63f3d2c-bf8b-312e-9f12-709f03ccf9ea",
+            "2655170a-6569-7723-b3d8-6ab57a107a3c"
+          ]
+        }
+      }
+    ],
+    "satelliteProjects": [],
+    "extraParameters": null,
+    "pages": [
+      {
+        "version": 1,
+        "id": "d63f3d2c-bf8b-312e-9f12-709f03ccf9ea",
+        "type": "sketch.ui.pages.PortableDevicePage",
+        "name": "Login",
+        "background": {
+          "value": null,
+          "type": null,
+          "lineWidth": 0,
+          "__type__": "sketch.framework.Brush"
+        },
+        "children": [
+          {
+            "type": "sketch.ui.common.PortableDevice",
+            "version": 1,
+            "id": "1bd187d8-eed9-12cc-3e4d-dcba47a33414",
+            "properties": {
+              "width": 3130,
+              "height": 2320,
+              "orientation": "portrait",
+              "background.value": "rgba(224,224,224,1)",
+              "background.type": "color",
+              "background.__type__": "sketch.framework.Brush"
+            },
+            "children": [
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "9ce9b747-311b-26be-37c8-76c22f888a16",
+                "properties": {
+                  "width": 56,
+                  "height": 31,
+                  "name": null,
+                  "left": 23,
+                  "top": 223,
+                  "text": "Email",
+                  "font.family": "Tahoma",
+                  "font.size": 26,
+                  "font.color.value": "rgba(17,237,61,1)",
+                  "font.color.type": "color",
+                  "font.color.lineWidth": 0,
+                  "font.color.__type__": "sketch.framework.Brush",
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "658b0228-5ca5-2cce-d61e-f14b588a5205",
+                "properties": {
+                  "name": null,
+                  "left": 117,
+                  "top": 223,
+                  "templateId": "ui.android.templates.TextFieldTemplate",
+                  "width": 245,
+                  "height": 30,
+                  "text": "",
+                  "font.color.value": "rgba(0,0,0,1)",
+                  "font.color.type": "color",
+                  "font.color.lineWidth": 0,
+                  "font.color.__type__": "sketch.framework.Brush",
+                  "font.family": "Tahoma"
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "2628ca9e-3b9b-a11f-00fc-69b422f846ef",
+                "properties": {
+                  "width": 78,
+                  "height": 27,
+                  "name": null,
+                  "left": 12,
+                  "top": 338,
+                  "text": "Password",
+                  "font.family": "Tahoma",
+                  "font.color.value": "rgba(217,30,17,1)",
+                  "font.color.type": "color",
+                  "font.color.lineWidth": 0,
+                  "font.color.__type__": "sketch.framework.Brush",
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "84301c96-e0b9-c984-f394-ca80a08c35c6",
+                "properties": {
+                  "name": null,
+                  "left": 117,
+                  "top": 336,
+                  "templateId": "ui.android.templates.TextFieldTemplate",
+                  "width": 245,
+                  "height": 30,
+                  "text": "",
+                  "font.family": "Tahoma"
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.ui.android.ImageTextButton",
+                "version": 1,
+                "id": "0fc11d2d-5f30-d52f-0401-2a7360be3978",
+                "properties": {
+                  "name": "Asset [412ae3c9-b244-afcb-ad6a-71cb052357f5]",
+                  "left": 118,
+                  "top": 555,
+                  "templateId": "ui.android.templates.ImageTextButtonTemplate",
+                  "showIcon": false,
+                  "font.family": "Tahoma",
+                  "font.__type__": "sketch.framework.Font",
+                  "width": 215,
+                  "height": 50,
+                  "text": "Login",
+                  "pageLink": "2655170a-6569-7723-b3d8-6ab57a107a3c"
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              }
+            ],
+            "panelProperties": {
+              "type": "sketch.ui.common.PortableDevicePanel",
+              "version": 1,
+              "id": "84f12761-ae3b-5f68-6f69-3134e22375f9",
+              "properties": {
+                "width": 450,
+                "height": 800,
+                "left": 1340,
+                "top": 760,
+                "clipSelf": true
+              }
+            }
+          }
+        ],
+        "isDeleted": false,
+        "groupId": "ea12ef78-acd4-45fc-79fa-53b31419b587",
+        "screenType": "Android"
+      },
+      {
+        "version": 1,
+        "id": "2655170a-6569-7723-b3d8-6ab57a107a3c",
+        "type": "sketch.ui.pages.PortableDevicePage",
+        "name": "HomePage",
+        "background": {
+          "value": null,
+          "type": null,
+          "lineWidth": 0,
+          "__type__": "sketch.framework.Brush"
+        },
+        "children": [
+          {
+            "type": "sketch.ui.common.PortableDevice",
+            "version": 1,
+            "id": "ed281faa-79b4-b8d2-9a48-7b609145869e",
+            "properties": {
+              "width": 3130,
+              "height": 2320
+            },
+            "children": [
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "08a9d5a1-08bd-7c7c-926c-2e08234ce817",
+                "properties": {
+                  "width": 46,
+                  "height": 26,
+                  "name": null,
+                  "left": 196,
+                  "top": 151,
+                  "text": "Label",
+                  "font.size": 30,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true,
+                  "pageLink": "d63f3d2c-bf8b-312e-9f12-709f03ccf9ea"
+                }
+              }
+            ],
+            "panelProperties": {
+              "type": "sketch.ui.common.PortableDevicePanel",
+              "version": 1,
+              "id": "0c951ac7-07d7-27d9-c983-ae351d16b707",
+              "properties": {
+                "width": 450,
+                "height": 800,
+                "left": 1340,
+                "top": 760,
+                "clipSelf": true
+              }
+            }
+          }
+        ],
+        "isDeleted": false,
+        "groupId": "ea12ef78-acd4-45fc-79fa-53b31419b587",
+        "screenType": "Android"
+      }
+    ],
+    "resources": {
+      "templates": {},
+      "colorPallet": [
+        {
+          "color": "rgba(245,14,26,1)",
+          "index": 0
+        }
+      ]
+    },
+    "modelVersion": 5,
+    "version": "2364aa7d-bbbc-4ae1-b3d8-e6c9a00bc8a1",
+    "pageStatuses": [],
+    "projectType": "AndroidProject"
+  }
+}

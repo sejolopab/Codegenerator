@@ -1,0 +1,22 @@
+{
+  "name": "codegenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CodeGenerator.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Jose Pablo Gamboa Vargas",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-plugin-jasmine": "^2.2.0",
+    "grunt": "^1.0.1",
+    "grunt-jasmine-node-coverage": "^1.1.1",
+    "jasmine": "^2.5.3"
+  },
+  "dependencies": {
+    "fs-extra": "^2.1.2",
+    "lodash": "^4.17.4",
+    "rimraf": "^2.6.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "platforms" : [
+    "android", "ios"
+  ],
+  "transitions" : [
+    {
+      "name" :  "gotoHomeView",
+      "destiny" : "homeView",
+      "origin" : "loginView"
+    }
+  ]
+}
